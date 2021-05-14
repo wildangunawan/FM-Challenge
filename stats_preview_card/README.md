@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/wildangunawan/FM-Challenges/stats_preview_card](https://github.com/wildangunawan/FM-Challenges/stats_preview_card)
-- Live Site URL: [https://wildangunawan.github.io/FM-Challenges/stats_preview_card](https://wildangunawan.github.io/FM-Challenges/)
+- Live Site URL: [https://wildangunawan.github.io/FM-Challenges/stats_preview_card/dist/](https://wildangunawan.github.io/FM-Challenges/stats_preview_card/dist/)
 
 ## My process
 
