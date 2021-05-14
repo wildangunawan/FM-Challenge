@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align:center;
+  background-color: #090B1A;
+  color: white;
+  font-family: "Inter";
+}
+
+.wrapper {
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  margin: 4em;
+}
+
+.violet {
+  color: #AA5CDB;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 1.5em;
+}
+
+.div__text {
+  padding: 2em;
+  background-color: #1B1938;
+  border-radius: 0 0 10px 10px;
+}
+
+.naration {
+  font-size: 13px;
+  opacity: 0.75;
+  line-height: 2em;
+}
+
+.stats {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column; 
+  
+  gap: 5px;
+}
+
+.stats div p {
+  margin-bottom: 0;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.stats div p.stat-heading {
+  font-family: "Lexend Deca";
+  text-transform: uppercase;
+  opacity: 0.6;
+  font-size: 12px;
+  font-weight: normal;
+  margin-top: 5px;
+}
+
+.div__image {
+  border-radius: 10px 10px 0 0;
+  background: linear-gradient(0deg, rgba(170, 92, 219, .5), rgba(170, 92, 219, .5)), url('images/image-header-mobile.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+@media screen and (min-width: 768px) {
+	.div__image {
+		background-position: unset;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	body {
+		text-align: unset;
+	}
+
+	.wrapper {
+		/* remove mobile row */
+		grid-template-rows: unset;
+
+		min-height: 30vh;
+		height: calc(100vh - 200px);
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		align-content: center;
+		margin: 6em;
+		grid-auto-rows: minmax(30vh, max-content);
+	}
+
+	h1 {
+		font-size: 2em;
+	}
+
+	.div__text {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		order: 1;
+		padding: 3em 4em;
+		border-radius: 10px 0 0 10px;
+	}
+
+	.stats {
+		flex-direction: row;
+		gap: 30px;
+	}
+
+	.div__image {
+		order: 2;
+		border-radius: 0 10px 10px 0;
+
+		background: linear-gradient(0deg, rgba(170, 92, 219, .5), rgba(170, 92, 219, .5)), url('images/image-header-desktop.jpg');
+		background-position: unset;
+
+		/*
+		* no idea why but we should reset this
+		* even though it's already declared in mobile
+		*/
+		background-size: cover;
+	}
+}
